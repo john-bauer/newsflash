@@ -59,12 +59,7 @@ const actions = {
       commit(
         "SET_ARTICLES_LIST",
         // TODO, dynamic filter + sort criteria
-        await NewsApi.getNews(
-          searchQuery,
-          "top-headlines",
-          "popularity",
-          state.countryInitials
-        )
+        await NewsApi.getNews(searchQuery, "top-headlines", "popularity", "US")
       );
       commit("SET_CURRENT_SEARCH_QUERY", searchQuery);
       commit("SET_TOTAL_RESULTS", state.articlesList.length);
