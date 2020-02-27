@@ -4,7 +4,13 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view />
+    <transition
+      mode="out-in"
+      enter-active-class="animated fadeIn fast"
+      enter-leave-class="animated fadeOut fast"
+    >
+      <router-view />
+    </transition>
   </div>
 </template>
 

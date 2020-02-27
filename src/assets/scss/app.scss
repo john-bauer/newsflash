@@ -21,4 +21,5 @@ $colors: map-merge($colors, $addColors);
 @import "theme";
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
+@import "animate";
 @import "overrides";
