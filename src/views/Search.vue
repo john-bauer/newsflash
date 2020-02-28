@@ -1,12 +1,12 @@
 <template>
   <div>
-    <!-- PAGE WHERE SEARCH RESULTS ARE SHOWN -->
-    search
+    <SearchResultsList />
   </div>
 </template>
 
 <script>
 import { mapActions } from "vuex";
+import SearchResultsList from "@/components/SearchResultsList.vue";
 
 export default {
   name: "Search",
@@ -15,6 +15,9 @@ export default {
   },
   mounted() {
     this.getSearchResults(this.$router.app.$route.query);
+  },
+  components: {
+    SearchResultsList
   }
 };
 </script>
