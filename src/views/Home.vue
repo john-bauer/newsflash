@@ -1,24 +1,26 @@
 <template>
   <div class="home">
-    <div v-if="articlesList">
-      {{ articlesList }}
-    </div>
+    <b-button @click="simulateSearch">SIMULATE SEARCHING</b-button>
   </div>
 </template>
 
 <script>
-import { mapActions, mapState } from "vuex";
-
 export default {
   name: "Home",
-  computed: {
-    ...mapState("news", ["articlesList"])
-  },
+  computed: {},
   methods: {
-    ...mapActions("news", ["getSearchResults"])
-  },
-  mounted() {
-    this.getSearchResults("news");
+    simulateSearch() {
+      this.$router.push({
+        path: "/search",
+        query: {
+          keywords: "apple",
+          filter: "top-headlines",
+          sort: "popularity"
+        }
+        // keyword can be anything, filter can be either everything or top-headlines,
+        // sort can be relevancy, popularity, publishedAt
+      });
+    }
   }
 };
 </script>

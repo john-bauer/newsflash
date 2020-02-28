@@ -19,7 +19,11 @@ const actions = {
     try {
       commit(
         "SET_ARTICLES_LIST",
-        await NewsApi.getNews(searchQuery, "top-headlines", "popularity", "US")
+        await NewsApi.getNews(
+          searchQuery.filter,
+          searchQuery.keywords,
+          searchQuery.filter
+        )
       );
     } catch (error) {
       return error;

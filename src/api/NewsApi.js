@@ -4,22 +4,21 @@ import axios from "axios";
 const baseUrl = "https://newsapi.org/v2";
 
 const NewsApi = {
-  getNews(searchQuery, filteringCriteria, sortingCriteria, countryInitials) {
+  getNews(filter, keywords, sort) {
     return axios
       .get(
         baseUrl +
           "/" +
-          filteringCriteria +
+          filter +
           "?q=" +
-          searchQuery +
+          keywords +
           "&sortBy=" +
-          sortingCriteria +
-          "sources?country=" +
-          countryInitials +
+          sort +
           "&apiKey=" +
           process.env.VUE_APP_NEWS_API_KEY
       )
       .then(response => {
+        console.log(response.data);
         return response.data;
       })
       .catch(error => {
