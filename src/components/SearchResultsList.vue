@@ -70,9 +70,6 @@ export default {
       window.open(article);
     }
   },
-  mounted() {
-    console.log(this.$router);
-  },
   components: {
     Spinner
   }

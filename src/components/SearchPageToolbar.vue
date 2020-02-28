@@ -9,7 +9,7 @@
       <b-navbar-item>
         <form @submit.prevent="handleSubmit()">
           <b-field>
-            <b-input v-model="keywords"></b-input>
+            <b-input v-model="keywords" name="search" type="search"></b-input>
           </b-field>
         </form>
       </b-navbar-item>
