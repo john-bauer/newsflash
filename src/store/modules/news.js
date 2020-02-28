@@ -22,7 +22,7 @@ const actions = {
         await NewsApi.getNews(
           searchQuery.filter,
           searchQuery.keywords,
-          searchQuery.filter
+          searchQuery.sort
         )
       );
     } catch (error) {
