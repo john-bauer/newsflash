@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <SearchResultsList />
-  </div>
+  <section class="section">
+    <div class="container">
+      <SearchResultsList />
+    </div>
+  </section>
 </template>
 
 <script>
