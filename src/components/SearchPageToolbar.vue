@@ -1,5 +1,5 @@
 <template>
-  <b-navbar>
+  <b-navbar fixed-top shadow>
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         <img src="@/assets/svg/01.svg" />
@@ -44,3 +44,9 @@ export default {
   }
 };
 </script>
+
+<style scoped lang="scss">
+.-has-border-bottom-grey {
+  border-bottom: 1px solid #bdbdbd;
+}
+</style>
