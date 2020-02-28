@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- PAGE WHERE SEARCH RESULTS ARE SHOWN -->
     search
   </div>
 </template>
