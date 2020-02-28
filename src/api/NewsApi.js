@@ -18,7 +18,6 @@ const NewsApi = {
           process.env.VUE_APP_NEWS_API_KEY
       )
       .then(response => {
-        console.log(response.data);
         return response.data;
       })
       .catch(error => {
