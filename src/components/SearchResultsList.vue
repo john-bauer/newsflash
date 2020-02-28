@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div v-if="status.loading">
-      <Spinner />
-    </div>
     <!-- TODO: clean up these conditionals, possibly set up more statuses in store -->
     <div v-if="articlesList">
       <div v-if="articlesList.length > 0">
@@ -49,16 +46,12 @@
           </article>
         </div>
       </div>
-      <div v-else-if="articlesList.length === 0">
-        No Results Found
-      </div>
     </div>
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex";
-import Spinner from "vue-simple-spinner";
 
 export default {
   name: "SearchResultsList",
@@ -69,9 +62,6 @@ export default {
     goTo(article) {
       window.open(article);
     }
-  },
-  components: {
-    Spinner
   }
 };
 </script>

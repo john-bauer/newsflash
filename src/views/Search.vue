@@ -1,8 +1,8 @@
 <template>
   <div>
-    <SearchPageToolbar />
     <section class="section">
       <div class="container">
+        <SearchPageForm />
         <SearchResultsList />
       </div>
     </section>
@@ -12,7 +12,7 @@
 <script>
 import { mapActions } from "vuex";
 import SearchResultsList from "@/components/SearchResultsList.vue";
-import SearchPageToolbar from "@/components/SearchPageToolbar.vue";
+import SearchPageForm from "@/components/SearchPageForm.vue";
 
 export default {
   name: "Search",
@@ -24,7 +24,7 @@ export default {
   },
   components: {
     SearchResultsList,
-    SearchPageToolbar
+    SearchPageForm
   }
 };
 </script>
