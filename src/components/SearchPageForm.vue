@@ -15,7 +15,9 @@ export default {
   name: "searchPageToolbar",
   data() {
     return {
-      keywords: null
+      keywords: null,
+      filter: "top-headlines",
+      sort: "popularity"
     };
   },
   methods: {
@@ -23,8 +25,8 @@ export default {
     handleSubmit() {
       let searchQuery = {
         keywords: this.keywords,
-        filter: "top-headlines",
-        sort: "popularity"
+        filter: this.filter,
+        sort: this.sort
       };
       this.$router.push({
         path: "/search",
