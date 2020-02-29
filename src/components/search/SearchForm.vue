@@ -28,9 +28,9 @@ export default {
   name: "searchPageToolbar",
   data() {
     return {
-      keywords: null,
-      filter: "top-headlines",
-      sort: "popularity"
+      keywords: this.$router.currentRoute.query.keywords,
+      filter: this.$router.currentRoute.query.filter,
+      sort: this.$router.currentRoute.query.sort
     };
   },
   methods: {
@@ -47,6 +47,9 @@ export default {
       });
       this.getSearchResults(searchQuery);
     }
+  },
+  mounted() {
+    console.log(this.$router.currentRoute.query);
   }
 };
 </script>
