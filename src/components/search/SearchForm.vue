@@ -47,9 +47,6 @@ export default {
       });
       this.getSearchResults(searchQuery);
     }
-  },
-  mounted() {
-    console.log(this.$router.currentRoute.query);
   }
 };
 </script>
