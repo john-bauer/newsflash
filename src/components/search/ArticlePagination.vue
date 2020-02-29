@@ -1,6 +1,8 @@
 <template>
   <div v-if="articlesData">
-    {{ articlesData.totalResults }}
+    <span>{{ articlesData.totalResults }}</span>
+    <br />
+    <span>{{ Math.ceil(articlesData.totalResults / 20) }}</span>
     <b-pagination
       :total="total"
       :current.sync="current"
