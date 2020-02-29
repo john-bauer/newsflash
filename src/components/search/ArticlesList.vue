@@ -1,10 +1,9 @@
 <template>
   <div>
-    <!-- TODO: clean up these conditionals, possibly set up more statuses in store -->
     <div v-if="articlesList">
       <div v-if="articlesList.length > 0">
         <div v-for="article in articlesList" :key="article.index">
-          <SearchResultItem
+          <ArticleItem
             :title="article.title"
             :urlToImage="article.urlToImage"
             :url="article.url"
@@ -20,20 +19,15 @@
 
 <script>
 import { mapState } from "vuex";
-import SearchResultItem from "@/components/SearchResultItem.vue";
+import ArticleItem from "@/components/search/ArticleItem.vue";
 
 export default {
-  name: "SearchResultsList",
+  name: "ArticlesList",
   computed: {
     ...mapState("news", ["articlesList", "status"])
   },
-  methods: {
-    goTo(article) {
-      window.open(article);
-    }
-  },
   components: {
-    SearchResultItem
+    ArticleItem
   }
 };
 </script>

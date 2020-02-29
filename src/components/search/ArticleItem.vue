@@ -40,7 +40,7 @@
 
 <script>
 export default {
-  name: "SearchResultItem",
+  name: "ArticlesList",
   props: {
     title: String,
     urlToImage: String,
@@ -48,6 +48,11 @@ export default {
     url: String,
     content: String,
     publishedAt: String
+  },
+  methods: {
+    goTo(article) {
+      window.open(article);
+    }
   }
 };
 </script>

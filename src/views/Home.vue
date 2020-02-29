@@ -1,16 +1,16 @@
 <template>
   <div class="home">
-    <HomeSearchField />
+    <SearchField />
   </div>
 </template>
 
 <script>
-import HomeSearchField from "@/components/HomeSearchField.vue";
+import SearchField from "@/components/home/SearchField.vue";
 
 export default {
   name: "Home",
   components: {
-    HomeSearchField
+    SearchField
   }
 };
 </script>

@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: "HomeSearchField",
+  name: "SearchField",
   data() {
     return {
       keywords: null

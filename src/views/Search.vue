@@ -2,8 +2,8 @@
   <div>
     <section class="section">
       <div class="container">
-        <SearchPageForm />
-        <SearchResultsList />
+        <SearchForm />
+        <ArticlesList />
       </div>
     </section>
   </div>
@@ -11,8 +11,8 @@
 
 <script>
 import { mapActions } from "vuex";
-import SearchResultsList from "@/components/SearchResultsList.vue";
-import SearchPageForm from "@/components/SearchPageForm.vue";
+import ArticlesList from "@/components/search/ArticlesList.vue";
+import SearchForm from "@/components/search/SearchForm.vue";
 
 export default {
   name: "Search",
@@ -23,8 +23,8 @@ export default {
     this.getSearchResults(this.$router.app.$route.query);
   },
   components: {
-    SearchResultsList,
-    SearchPageForm
+    ArticlesList,
+    SearchForm
   }
 };
 </script>
