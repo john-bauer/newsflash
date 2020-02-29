@@ -4,6 +4,19 @@
       <b-field>
         <b-input v-model="keywords" type="search"></b-input>
       </b-field>
+      <b-field>
+        <b-select v-model="filter">
+          <option value="top-headlines">Top Headlines</option>
+          <option value="everything">Everything</option>
+        </b-select>
+      </b-field>
+      <b-field>
+        <b-select v-model="sort">
+          <option value="popularity">Popularity</option>
+          <option value="relevancy">Relevance</option>
+          <option value="latest">Latest</option>
+        </b-select>
+      </b-field>
     </form>
   </div>
 </template>
