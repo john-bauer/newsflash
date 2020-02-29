@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="articlesData">
     {{ articlesData.totalResults }}
   </div>
 </template>
