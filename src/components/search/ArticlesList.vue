@@ -1,33 +1,34 @@
 <template>
   <div>
-    <div v-if="articlesList">
-      <div v-if="articlesList.length > 0">
-        <div v-for="article in articlesList" :key="article.index">
-          <ArticleItem
-            :title="article.title"
-            :urlToImage="article.urlToImage"
-            :url="article.url"
-            :sourceName="article.source.name"
-            :content="article.content"
-            :publishedAt="article.publishedAt"
-          />
-        </div>
+    <div v-if="articlesData">
+      <div v-for="article in articlesData.articles" :key="article.index">
+        <ArticleItem
+          :title="article.title"
+          :urlToImage="article.urlToImage"
+          :url="article.url"
+          :sourceName="article.source.name"
+          :content="article.content"
+          :publishedAt="article.publishedAt"
+        />
       </div>
     </div>
+    <ArticlePagination />
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex";
 import ArticleItem from "@/components/search/ArticleItem.vue";
+import ArticlePagination from "@/components/search/ArticlePagination.vue";
 
 export default {
   name: "ArticlesList",
   computed: {
-    ...mapState("news", ["articlesList", "status"])
+    ...mapState("news", ["articlesData"])
   },
   components: {
-    ArticleItem
+    ArticleItem,
+    ArticlePagination
   }
 };
 </script>

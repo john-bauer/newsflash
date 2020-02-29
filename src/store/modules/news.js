@@ -2,15 +2,15 @@
 import NewsApi from "@/api/NewsApi.js";
 
 const state = {
-  articlesList: null,
+  articlesData: null,
   status: {
     loading: false
   }
 };
 
 const mutations = {
-  SET_ARTICLES_LIST(state, payload) {
-    state.articlesList = payload.articles;
+  SET_ARTICLES_DATA(state, payload) {
+    state.articlesData = payload;
   },
   SET_STATUS_LOADING(state, payload) {
     state.status.loading = payload;
@@ -22,7 +22,7 @@ const actions = {
     try {
       commit("SET_STATUS_LOADING", true);
       commit(
-        "SET_ARTICLES_LIST",
+        "SET_ARTICLES_DATA",
         await NewsApi.getNews(
           searchQuery.filter,
           searchQuery.keywords,
