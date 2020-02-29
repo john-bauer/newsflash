@@ -2,7 +2,17 @@
   <div>
     <form @submit.prevent="handleSubmit()">
       <b-field>
-        <b-input v-model="keywords" type="search"></b-input>
+        <b-input
+          expanded
+          placeholder="Search by Keyword"
+          v-model="keywords"
+          type="search"
+        ></b-input>
+        <p class="control">
+          <span class="button is-primary" @click="handleSubmit()"
+            ><span class="icon"><i class="mdi mdi-magnify"></i></span
+          ></span>
+        </p>
       </b-field>
       <b-field>
         <b-select v-model="filter">
@@ -18,6 +28,7 @@
         </b-select>
       </b-field>
     </form>
+    <span>On page {{ page }}</span>
   </div>
 </template>
 
@@ -30,7 +41,8 @@ export default {
     return {
       keywords: this.$router.currentRoute.query.keywords,
       filter: this.$router.currentRoute.query.filter,
-      sort: this.$router.currentRoute.query.sort
+      sort: this.$router.currentRoute.query.sort,
+      page: this.$router.currentRoute.query.page
     };
   },
   methods: {
@@ -39,7 +51,8 @@ export default {
       let searchQuery = {
         keywords: this.keywords,
         filter: this.filter,
-        sort: this.sort
+        sort: this.sort,
+        page: this.page
       };
       this.$router.push({
         path: "/search",

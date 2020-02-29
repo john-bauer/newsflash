@@ -31,7 +31,8 @@ export default {
         query: {
           keywords: this.keywords,
           filter: "top-headlines",
-          sort: "popularity"
+          sort: "popularity",
+          page: "1"
         }
       });
     }

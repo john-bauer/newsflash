@@ -26,7 +26,8 @@ const actions = {
         await NewsApi.getNews(
           searchQuery.filter,
           searchQuery.keywords,
-          searchQuery.sort
+          searchQuery.sort,
+          searchQuery.page
         )
       );
       commit("SET_STATUS_LOADING", false);
