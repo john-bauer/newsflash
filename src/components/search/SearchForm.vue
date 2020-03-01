@@ -4,31 +4,29 @@
       <b-field>
         <b-input
           expanded
+          rounded
           placeholder="Search by Keyword"
           v-model="keywords"
           type="search"
         ></b-input>
         <p class="control">
-          <span class="button is-primary" @click="handleSubmit()"
+          <span class="button is-rounded is-primary" @click="handleSubmit()"
             ><span class="icon"><i class="mdi mdi-magnify"></i></span
           ></span>
         </p>
       </b-field>
       <b-field>
-        <b-select v-model="filter">
+        <b-select rounded v-model="filter">
           <option value="top-headlines">Top Headlines</option>
           <option value="everything">Everything</option>
         </b-select>
-      </b-field>
-      <b-field>
-        <b-select v-model="sort">
+        <b-select rounded v-model="sort">
           <option value="popularity">Popularity</option>
           <option value="relevancy">Relevance</option>
           <option value="latest">Latest</option>
         </b-select>
       </b-field>
     </form>
-    <span>On page {{ page }}</span>
   </div>
 </template>
 

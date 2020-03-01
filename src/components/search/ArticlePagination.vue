@@ -1,7 +1,5 @@
 <template>
   <div v-if="articlesData">
-    <span>totalResults: {{ this.articlesData.totalResults }}</span>
-    <span>total: {{ this.total }}</span>
     <b-pagination
       @change="onPageChange"
       :total="total"
