@@ -46,7 +46,6 @@ const NewsApi = {
         }
       };
       let lang = languageConversion(country);
-      console.log("got here...");
       return axios
         .get(
           `${baseUrl}/${filter}?language=${lang}&q=${keywords}&sortBy=${sort}&page=${page}&apiKey=${process.env.VUE_APP_NEWS_API_KEY}`
