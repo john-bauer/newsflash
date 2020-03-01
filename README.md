@@ -34,7 +34,7 @@ You'll need a recent installation of [Node](https://nodejs.org/en/) and [Yarn](h
 - Implement search by category.
 
 ### Defects
-- Update page on forward/backwards navigation on search page.
+- Update page on forward/backwards navigation on search page ✅
 
 ## Note on Rate Limits
 Currently, this app is limited to 500 requests per day. 
