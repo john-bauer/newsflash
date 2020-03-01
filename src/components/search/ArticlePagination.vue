@@ -1,6 +1,9 @@
 <template>
   <div v-if="articlesData">
+    <span>totalResults: {{ this.articlesData.totalResults }}</span>
+    <span>total: {{ this.total }}</span>
     <b-pagination
+      @change="onPageChange"
       :total="total"
       :current.sync="current"
       :range-before="rangeBefore"
@@ -23,11 +26,13 @@
 
 <script>
 import { mapState } from "vuex";
+import { mapActions } from "vuex";
 
 export default {
   name: "ArticlePagination",
   data() {
     return {
+      current: parseInt(this.$router.currentRoute.query.page),
       perPage: 20,
       rangeBefore: 3,
       rangeAfter: 1,
@@ -42,10 +47,19 @@ export default {
   computed: {
     ...mapState("news", ["articlesData", "currentPage"]),
     total: function() {
-      return Math.ceil(this.articlesData.totalResults / 20);
-    },
-    current: function() {
-      return parseInt(this.$router.currentRoute.query.page);
+      return this.articlesData.totalResults;
+    }
+  },
+  methods: {
+    ...mapActions("news", ["getSearchResults"]),
+    onPageChange(page) {
+      let searchQuery = {
+        filter: this.$router.currentRoute.query.filter,
+        keywords: this.$router.currentRoute.query.keywords,
+        sort: this.$router.currentRoute.query.sort,
+        page: page
+      };
+      this.getSearchResults(searchQuery);
     }
   }
 };
