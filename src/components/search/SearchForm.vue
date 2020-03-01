@@ -34,8 +34,6 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
-
 export default {
   name: "searchPageToolbar",
   data() {
@@ -48,19 +46,17 @@ export default {
     };
   },
   methods: {
-    ...mapActions("news", ["getSearchResults"]),
     handleSubmit() {
       let searchQuery = {
         keywords: this.keywords,
         filter: this.filter,
         sort: this.sort,
-        page: 1
+        page: this.page
       };
       this.$router.push({
         path: "/search",
         query: searchQuery
       });
-      this.getSearchResults(searchQuery);
     }
   }
 };

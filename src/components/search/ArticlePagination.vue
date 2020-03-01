@@ -4,7 +4,7 @@
     <b-pagination
       @change="onPageChange"
       :total="total"
-      :current.sync="current"
+      :current="parseInt(this.$router.currentRoute.query.page)"
       :range-before="rangeBefore"
       :range-after="rangeAfter"
       :order="order"
@@ -25,13 +25,10 @@
 
 <script>
 import { mapState } from "vuex";
-import { mapActions } from "vuex";
-
 export default {
   name: "ArticlePagination",
   data() {
     return {
-      current: parseInt(this.$router.currentRoute.query.page),
       perPage: 20,
       rangeBefore: 3,
       rangeAfter: 1,
@@ -50,16 +47,17 @@ export default {
     }
   },
   methods: {
-    ...mapActions("news", ["getSearchResults"]),
     onPageChange(page) {
       let searchQuery = {
-        filter: this.$router.currentRoute.query.filter,
         keywords: this.$router.currentRoute.query.keywords,
+        filter: this.$router.currentRoute.query.filter,
         sort: this.$router.currentRoute.query.sort,
         page: page
       };
-      this.getSearchResults(searchQuery);
-      // TODO: animate
+      this.$router.push({
+        path: "/search",
+        query: searchQuery
+      });
       window.scrollTo(0, 0);
     }
   }

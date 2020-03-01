@@ -22,6 +22,11 @@ export default {
   mounted() {
     this.getSearchResults(this.$router.app.$route.query);
   },
+  watch: {
+    $route: function() {
+      this.getSearchResults(this.$router.app.$route.query);
+    }
+  },
   components: {
     ArticlesList,
     SearchForm
