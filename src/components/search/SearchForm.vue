@@ -43,7 +43,8 @@ export default {
       keywords: this.$router.currentRoute.query.keywords,
       filter: this.$router.currentRoute.query.filter,
       sort: this.$router.currentRoute.query.sort,
-      page: this.$router.currentRoute.query.page
+      page: this.$router.currentRoute.query.page,
+      country: this.$router.currentRoute.query.country
     };
   },
   methods: {

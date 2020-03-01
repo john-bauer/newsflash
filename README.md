@@ -1,25 +1,35 @@
-# newsflash
+# Newsflash
 
-## Project setup
-```
-yarn install
-```
+## About
+Newsflash is a simple way to get relevant news from thousands of sources.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Goals
 
-### Compiles and minifies for production
-```
-yarn build
-```
 
-### Lints and fixes files
-```
-yarn lint
-```
+## Live Demo
+The live demo can be found at [newsflash-demo.netlify.com](https://newsflash-demo.netlify.com/).
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# newsflash
+## Installations Required
+You'll need a recent installation of [Node](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/). That's it.
+
+## Technologies Used
+- [Vue.js](https://vuejs.org/): Scaffolded with vue CLI 3.
+- [Vue Router](https://router.vuejs.org/): Using history mode.
+- [Vuex](https://vuex.vuejs.org/): For state management, set up with module pattern.
+- [SCSS](https://sass-lang.com/documentation/syntax): with [dart-sass](https://sass-lang.com/dart-sass).
+- [ESLint](https://eslint.org/): Linter and style enforcer, configured to follow standard style.
+- [Babel](https://babeljs.io/): Compiles es6 to work in older browsers.
+- [Buefy](https://buefy.org/): A lightweight UI Library based on [Bulma](https://bulma.io/).
+- [Animate.css](https://daneden.github.io/animate.css/): Simplifies transitions.
+- [News API](https://newsapi.org/): A fantastic, free (with limitations) api for curating news articles. 
+- [Axios](https://www.npmjs.com/package/axios): A simpler way to make http requests. 
+
+## Backlog
+- Set up country and language filtering process.
+- Gather country flags as icons.
+- Animate scroll to top on page change
+- Break down search form into multiple components.
+- Implement search by category.
+
+## Note on Rate Limits
+Currently, this app is limited to 500 requests per day. 
