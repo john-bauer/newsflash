@@ -46,9 +46,10 @@ const NewsApi = {
         }
       };
       let lang = languageConversion(country);
+      console.log("got here...");
       return axios
         .get(
-          `${baseUrl}/${filter}?language=en&q=${lang}&sortBy=${sort}&page=${page}&apiKey=${process.env.VUE_APP_NEWS_API_KEY}`
+          `${baseUrl}/${filter}?language=${lang}&q=${keywords}&sortBy=${sort}&page=${page}&apiKey=${process.env.VUE_APP_NEWS_API_KEY}`
         )
         .then(response => {
           return response.data;

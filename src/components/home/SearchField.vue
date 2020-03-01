@@ -30,8 +30,8 @@ export default {
         path: "/search",
         query: {
           keywords: this.keywords,
-          filter: "top-headlines",
-          sort: "everything",
+          filter: "everything",
+          sort: "popularity",
           page: "1",
           country: "us"
         }
