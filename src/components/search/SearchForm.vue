@@ -19,11 +19,11 @@
         </p>
       </b-field>
       <b-field>
-        <b-select rounded v-model="filter">
+        <b-select rounded v-model="filter" @input="handleSubmit">
           <option value="top-headlines">Top Headlines</option>
           <option value="everything">Everything</option>
         </b-select>
-        <b-select rounded v-model="sort">
+        <b-select rounded v-model="sort" @input="handleSubmit">
           <option value="popularity">Popularity</option>
           <option value="relevancy">Relevance</option>
           <option value="latest">Latest</option>
@@ -49,6 +49,9 @@ export default {
   },
   methods: {
     ...mapActions("news", ["getSearchResults"]),
+    trySomething() {
+      console.log("trying something...");
+    },
     handleSubmit() {
       let searchQuery = {
         keywords: this.keywords,
