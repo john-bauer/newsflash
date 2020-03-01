@@ -1,5 +1,6 @@
 <template>
   <div v-if="articlesData">
+    <!-- TODO: Investigate selected page not reflecting current page (possibly use route watcher?) -->
     <b-pagination
       @change="onPageChange"
       :total="total"

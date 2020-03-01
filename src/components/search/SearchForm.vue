@@ -50,7 +50,7 @@ export default {
         keywords: this.keywords,
         filter: this.filter,
         sort: this.sort,
-        page: this.page
+        page: 1
       };
       this.$router.push({
         path: "/search",
