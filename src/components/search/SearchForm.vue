@@ -20,13 +20,20 @@
       </b-field>
       <b-field>
         <b-select rounded v-model="filter" @input="handleSubmit">
-          <option value="top-headlines">Top Headlines</option>
           <option value="everything">Everything</option>
+          <option value="top-headlines">Top Headlines</option>
         </b-select>
         <b-select rounded v-model="sort" @input="handleSubmit">
           <option value="popularity">Popularity</option>
           <option value="relevancy">Relevance</option>
           <option value="latest">Latest</option>
+        </b-select>
+        <b-select rounded v-model="country" @input="handleSubmit">
+          <option value="">All</option>
+          <option value="us">United States</option>
+          <option value="fr">France</option>
+          <option value="es">Spain</option>
+          <option value="de">Germany</option>
         </b-select>
       </b-field>
     </form>
@@ -41,7 +48,8 @@ export default {
       keywords: this.$router.currentRoute.query.keywords,
       filter: this.$router.currentRoute.query.filter,
       sort: this.$router.currentRoute.query.sort,
-      page: this.$router.currentRoute.query.page
+      page: this.$router.currentRoute.query.page,
+      country: this.$router.currentRoute.query.country
     };
   },
   methods: {
@@ -50,7 +58,8 @@ export default {
         keywords: this.keywords,
         filter: this.filter,
         sort: this.sort,
-        page: this.page
+        page: this.page,
+        country: this.country
       };
       this.$router.push({
         path: "/search",
@@ -64,6 +73,7 @@ export default {
       this.filter = this.$router.currentRoute.query.filter;
       this.sort = this.$router.currentRoute.query.sort;
       this.page = this.$router.currentRoute.query.page;
+      this.country = this.$router.currentRoute.query.country;
     }
   }
 };

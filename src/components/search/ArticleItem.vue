@@ -47,7 +47,8 @@ export default {
     sourceName: String,
     url: String,
     content: String,
-    publishedAt: String
+    publishedAt: String,
+    country: String
   },
   methods: {
     goTo(article) {

@@ -20,17 +20,43 @@ pass language to api, and show language in url
 */
 
 const NewsApi = {
-  getNews(filter, keywords, sort, pageNumber) {
-    return axios
-      .get(
-        `${baseUrl}/${filter}?q=${keywords}&sortBy=${sort}&page=${pageNumber}&apiKey=${process.env.VUE_APP_NEWS_API_KEY}`
-      )
-      .then(response => {
-        return response.data;
-      })
-      .catch(error => {
-        return error;
-      });
+  getNews(filter, keywords, sort, page, country) {
+    if (filter === "top-headlines") {
+      return axios
+        .get(
+          `${baseUrl}/${filter}?country=${country}&q=${keywords}&sortBy=${sort}&page=${page}&apiKey=${process.env.VUE_APP_NEWS_API_KEY}`
+        )
+        .then(response => {
+          return response.data;
+        })
+        .catch(error => {
+          return error;
+        });
+    } else if (filter === "everything") {
+      const languageConversion = country => {
+        /* TODO: Explore a more elegant solution for this... */
+        if (country === "us") {
+          return "en";
+        } else if (country === "es") {
+          return "es";
+        } else if (country === "de") {
+          return "de";
+        } else if (country === "fr") {
+          return "fr";
+        }
+      };
+      let lang = languageConversion(country);
+      return axios
+        .get(
+          `${baseUrl}/${filter}?language=en&q=${lang}&sortBy=${sort}&page=${page}&apiKey=${process.env.VUE_APP_NEWS_API_KEY}`
+        )
+        .then(response => {
+          return response.data;
+        })
+        .catch(error => {
+          return error;
+        });
+    }
   }
 };
 

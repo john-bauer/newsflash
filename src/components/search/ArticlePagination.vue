@@ -52,7 +52,8 @@ export default {
         keywords: this.$router.currentRoute.query.keywords,
         filter: this.$router.currentRoute.query.filter,
         sort: this.$router.currentRoute.query.sort,
-        page: page
+        page: page,
+        country: this.$router.currentRoute.query.country
       };
       this.$router.push({
         path: "/search",

@@ -28,7 +28,8 @@ const actions = {
           searchQuery.filter,
           searchQuery.keywords,
           searchQuery.sort,
-          searchQuery.page
+          searchQuery.page,
+          searchQuery.country
         )
       );
       commit("SET_STATUS_LOADING", false);

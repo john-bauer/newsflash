@@ -31,8 +31,9 @@ export default {
         query: {
           keywords: this.keywords,
           filter: "top-headlines",
-          sort: "popularity",
-          page: "1"
+          sort: "everything",
+          page: "1",
+          country: "us"
         }
       });
     }
