@@ -3,6 +3,7 @@
     <form @submit.prevent="handleSubmit()">
       <b-field>
         <b-input
+          size="is-medium"
           expanded
           rounded
           placeholder="Search by Keyword"
@@ -10,7 +11,9 @@
           type="search"
         ></b-input>
         <p class="control">
-          <span class="button is-rounded is-primary" @click="handleSubmit()"
+          <span
+            class="button is-medium is-rounded is-primary"
+            @click="handleSubmit()"
             ><span class="icon"><i class="mdi mdi-magnify"></i></span
           ></span>
         </p>

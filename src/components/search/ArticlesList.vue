@@ -1,6 +1,11 @@
 <template>
   <div>
     <div v-if="articlesData">
+      <span class="is-size-7">
+        {{ articlesData.totalResults }} total results for "{{
+          this.$router.currentRoute.query.keywords
+        }}"</span
+      >
       <div v-for="article in articlesData.articles" :key="article.index">
         <ArticleItem
           :title="article.title"
