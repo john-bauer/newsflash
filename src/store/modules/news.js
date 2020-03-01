@@ -3,6 +3,7 @@ import NewsApi from "@/api/NewsApi.js";
 
 const state = {
   articlesData: null,
+  currentPage: null,
   status: {
     loading: false
   }

@@ -1,8 +1,5 @@
 <template>
   <div v-if="articlesData">
-    <span>{{ articlesData.totalResults }}</span>
-    <br />
-    <span>{{ Math.ceil(articlesData.totalResults / 20) }}</span>
     <b-pagination
       :total="total"
       :current.sync="current"
@@ -31,9 +28,7 @@ export default {
   name: "ArticlePagination",
   data() {
     return {
-      total: 200,
-      current: 1,
-      perPage: 10,
+      perPage: 20,
       rangeBefore: 3,
       rangeAfter: 1,
       order: "",
@@ -45,7 +40,13 @@ export default {
     };
   },
   computed: {
-    ...mapState("news", ["articlesData"])
+    ...mapState("news", ["articlesData", "currentPage"]),
+    total: function() {
+      return Math.ceil(this.articlesData.totalResults / 20);
+    },
+    current: function() {
+      return parseInt(this.$router.currentRoute.query.page);
+    }
   }
 };
 </script>
