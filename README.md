@@ -25,11 +25,16 @@ You'll need a recent installation of [Node](https://nodejs.org/en/) and [Yarn](h
 - [Axios](https://www.npmjs.com/package/axios): A simpler way to make http requests. 
 
 ## Backlog
+
+### Features
 - Set up country and language filtering process.
 - Gather country flags as icons.
 - Animate scroll to top on page change
 - Break down search form into multiple components.
 - Implement search by category.
+
+### Defects
+- Update page on forward/backwards navigation on search page.
 
 ## Note on Rate Limits
 Currently, this app is limited to 500 requests per day. 

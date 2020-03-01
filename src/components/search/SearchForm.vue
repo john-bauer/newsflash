@@ -49,9 +49,6 @@ export default {
   },
   methods: {
     ...mapActions("news", ["getSearchResults"]),
-    trySomething() {
-      console.log("trying something...");
-    },
     handleSubmit() {
       let searchQuery = {
         keywords: this.keywords,
