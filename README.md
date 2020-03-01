@@ -35,6 +35,7 @@ You'll need a recent installation of [Node](https://nodejs.org/en/) and [Yarn](h
 
 ### Defects
 - Update page on forward/backwards navigation on search page ✅
+- If keyword is changed, set current page to 1. 
 
 ## Note on Rate Limits
 Currently, this app is limited to 500 requests per day. 

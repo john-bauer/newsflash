@@ -23,17 +23,7 @@ const NewsApi = {
   getNews(filter, keywords, sort, pageNumber) {
     return axios
       .get(
-        baseUrl +
-          "/" +
-          filter +
-          "?q=" +
-          keywords +
-          "&sortBy=" +
-          sort +
-          "&page=" +
-          pageNumber +
-          "&apiKey=" +
-          process.env.VUE_APP_NEWS_API_KEY
+        `${baseUrl}/${filter}?q=${keywords}&sortBy=${sort}&page=${pageNumber}&apiKey=${process.env.VUE_APP_NEWS_API_KEY}`
       )
       .then(response => {
         return response.data;
