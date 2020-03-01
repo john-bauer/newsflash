@@ -59,6 +59,8 @@ export default {
         page: page
       };
       this.getSearchResults(searchQuery);
+      // TODO: animate
+      window.scrollTo(0, 0);
     }
   }
 };
