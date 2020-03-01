@@ -41,8 +41,7 @@ export default {
       keywords: this.$router.currentRoute.query.keywords,
       filter: this.$router.currentRoute.query.filter,
       sort: this.$router.currentRoute.query.sort,
-      page: this.$router.currentRoute.query.page,
-      country: this.$router.currentRoute.query.country
+      page: this.$router.currentRoute.query.page
     };
   },
   methods: {
@@ -57,6 +56,14 @@ export default {
         path: "/search",
         query: searchQuery
       });
+    }
+  },
+  watch: {
+    $route() {
+      this.keywords = this.$router.currentRoute.query.keywords;
+      this.filter = this.$router.currentRoute.query.filter;
+      this.sort = this.$router.currentRoute.query.sort;
+      this.page = this.$router.currentRoute.query.page;
     }
   }
 };
