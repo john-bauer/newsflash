@@ -10,7 +10,6 @@
       :order="order"
       :size="size"
       :simple="isSimple"
-      :rounded="isRounded"
       :per-page="perPage"
       :icon-prev="prevIcon"
       :icon-next="nextIcon"
@@ -35,7 +34,6 @@ export default {
       order: "",
       size: "",
       isSimple: false,
-      isRounded: true,
       prevIcon: "chevron-left",
       nextIcon: "chevron-right"
     };
