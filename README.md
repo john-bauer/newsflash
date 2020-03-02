@@ -27,11 +27,13 @@ You'll need a recent installation of [Node](https://nodejs.org/en/) and [Yarn](h
 ## Backlog
 
 ### Features
-- Set up country and language filtering process.
-- Gather country flags as icons.
-- Animate scroll to top on page change
-- Break down search form into multiple components.
+- Set up country and language filtering process. ✅
+- Gather country flags as icons. ✅
+- Animate scroll to top on page change ✅
+- Break down search form into multiple components. 
 - Implement search by category.
+- If less than 20 results, hide pagination
+- If on last page of results, show "end of results"
 
 ### Defects
 - Update page on forward/backwards navigation on search page ✅
