@@ -17,7 +17,7 @@
           ></span>
         </p>
       </b-field>
-      <b-field>
+      <b-field class="-selectors">
         <b-select
           v-model="filter"
           size="is-small"
@@ -93,4 +93,8 @@ export default {
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.-selectors {
+  overflow: auto !important;
+}
+</style>
