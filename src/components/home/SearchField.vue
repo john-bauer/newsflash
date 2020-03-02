@@ -1,19 +1,15 @@
 <template>
-  <section class="hero is-large">
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <img src="@/assets/svg/01.svg" class="-logo" />
-        <p class="subtitle">
-          Explore the latest, most relevant headlines from thousands of sources.
-        </p>
-        <form @submit.prevent="handleSubmit()">
-          <b-field>
-            <b-input size="is-medium" v-model="keywords"></b-input>
-          </b-field>
-        </form>
-      </div>
-    </div>
-  </section>
+  <div class="has-text-centered">
+    <img src="@/assets/svg/01.svg" class="-logo" />
+    <p class="subtitle">
+      Explore the latest, most relevant headlines from thousands of sources.
+    </p>
+    <form @submit.prevent="handleSubmit()">
+      <b-field>
+        <b-input size="is-medium" v-model="keywords"></b-input>
+      </b-field>
+    </form>
+  </div>
 </template>
 
 <script>
