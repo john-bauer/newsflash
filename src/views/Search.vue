@@ -17,7 +17,10 @@ import SearchForm from "@/components/search/SearchForm.vue";
 export default {
   name: "Search",
   methods: {
-    ...mapActions("news", ["getSearchResults"])
+    ...mapActions("news", ["getSearchResults"]),
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    }
   },
   mounted() {
     this.getSearchResults(this.$router.app.$route.query);
@@ -25,6 +28,7 @@ export default {
   watch: {
     $route: function() {
       this.getSearchResults(this.$router.app.$route.query);
+      this.scrollToTop();
     }
   },
   components: {

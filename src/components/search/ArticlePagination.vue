@@ -57,7 +57,6 @@ export default {
         path: "/search",
         query: searchQuery
       });
-      window.scrollTo(0, 0);
     }
   }
 };
