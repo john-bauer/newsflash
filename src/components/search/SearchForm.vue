@@ -16,31 +16,16 @@
         </p>
       </b-field>
       <b-field class="-selectors">
-        <b-select
-          v-model="filter"
-          size="is-small"
-          icon="filter"
-          @input="handleSubmit"
-        >
+        <b-select v-model="filter" icon="filter" @input="handleSubmit">
           <option value="everything">Everything</option>
           <option value="top-headlines">Top Headlines</option>
         </b-select>
-        <b-select
-          v-model="sort"
-          icon="sort"
-          size="is-small"
-          @input="handleSubmit"
-        >
+        <b-select v-model="sort" icon="sort" @input="handleSubmit">
           <option value="popularity">Popularity</option>
           <option value="relevancy">Relevance</option>
           <option value="latest">Latest</option>
         </b-select>
-        <b-select
-          v-model="country"
-          icon="earth"
-          @input="handleSubmit"
-          size="is-small"
-        >
+        <b-select v-model="country" icon="earth" @input="handleSubmit">
           <option value="">All</option>
           <option value="us">United States</option>
           <option value="fr">France</option>
