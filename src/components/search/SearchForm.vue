@@ -10,9 +10,7 @@
           type="search"
         ></b-input>
         <p class="control">
-          <span
-            class="button is-medium is-rounded is-primary"
-            @click="handleSubmit()"
+          <span class="button is-medium is-primary" @click="handleSubmit()"
             ><span class="icon"><i class="mdi mdi-magnify"></i></span
           ></span>
         </p>
@@ -95,6 +93,14 @@ export default {
 
 <style scoped lang="scss">
 .-selectors {
-  overflow: auto !important;
+  overflow-x: auto;
+}
+
+.-selectors::-webkit-scrollbar {
+  display: none;
+}
+
+.-selectors {
+  -ms-overflow-style: none;
 }
 </style>
