@@ -14,7 +14,7 @@
           :urlToImage="article.urlToImage"
           :url="article.url"
           :sourceName="article.source.name"
-          :content="article.content"
+          :description="article.description"
           :publishedAt="article.publishedAt"
         />
       </div>
@@ -41,8 +41,4 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-.-article-title {
-  cursor: pointer;
-}
-</style>
+<style scoped lang="scss"></style>

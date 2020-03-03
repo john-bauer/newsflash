@@ -3,10 +3,10 @@
     <!-- DESKTOP VERSION -->
     <article class="media box is-hidden-mobile">
       <figure class="media-left">
-        <p class="image is-96x96" v-if="urlToImage">
+        <p class="image is-128x128" v-if="urlToImage">
           <img :src="urlToImage" />
         </p>
-        <p class="image is-96x96" v-else-if="!urlToImage">
+        <p class="image is-128x128" v-else-if="!urlToImage">
           <img src="@/assets/img/no-image-available.jpg" />
         </p>
       </figure>
@@ -23,7 +23,7 @@
             </span>
             <br />
             <span class="subtitle is-size-6 is-size-7-touch">
-              {{ content }}
+              {{ description }}
             </span>
           </p>
         </div>
@@ -59,7 +59,7 @@
             </span>
             <br />
             <span class="subtitle is-size-6 is-size-7-touch">
-              {{ content }}
+              {{ description }}
             </span>
           </p>
         </div>
@@ -85,7 +85,7 @@ export default {
     urlToImage: String,
     sourceName: String,
     url: String,
-    content: String,
+    description: String,
     publishedAt: String,
     country: String
   },
@@ -100,5 +100,9 @@ export default {
 <style scoped lang="scss">
 .-image {
   border-radius: 6px;
+}
+
+.-article-title {
+  cursor: pointer;
 }
 </style>
