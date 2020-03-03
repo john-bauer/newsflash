@@ -1,8 +1,8 @@
 <template>
-  <section class="hero is-large">
+  <section class="hero is-medium">
     <div class="hero-body">
       <SearchField />
-      <NewsApiPlug class="-spacer" />
+      <NewsApiPlug />
     </div>
   </section>
 </template>
@@ -19,8 +19,4 @@ export default {
   }
 };
 </script>
-<style scoped lang="scss">
-.-spacer {
-  margin-top: 56px;
-}
-</style>
+<style scoped lang="scss"></style>
