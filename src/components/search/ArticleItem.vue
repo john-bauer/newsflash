@@ -16,7 +16,7 @@
             {{ sourceName }}
             <br />
             <span
-              class="has-text-link has-text-weight-semibold -article-title is-capitalized"
+              class="has-text-link has-text-weight-semibold title -article-title is-capitalized"
               @click="goTo(url)"
             >
               {{ title }}
@@ -52,7 +52,7 @@
             {{ sourceName }}
             <br />
             <span
-              class="has-text-link has-text-weight-semibold -article-title is-capitalized"
+              class="has-text-link has-text-weight-semibold title -article-title is-capitalized"
               @click="goTo(url)"
             >
               {{ title }}
