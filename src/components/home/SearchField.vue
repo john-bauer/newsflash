@@ -26,10 +26,10 @@ export default {
         path: "/search",
         query: {
           keywords: this.keywords,
-          filter: "everything",
+          filter: "top-headlines",
           sort: "popularity",
           page: "1",
-          country: "us"
+          country: ""
         }
       });
     }
