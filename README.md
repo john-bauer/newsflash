@@ -28,6 +28,10 @@ You'll need a recent installation of [Node](https://nodejs.org/en/) and [Yarn](h
 
 ### Features
 - Set up country and language filtering process. ✅
+- Fix search form to top of page on /search.
+- Remove cruft from pagination component, possibly remove advance/go back buttons.
+- show loader while fetch is taking place.
+- Add empty state for no results.
 - Gather country flags as icons. ✅
 - Animate scroll to top on page change ✅
 - Break down search form into multiple components. 
