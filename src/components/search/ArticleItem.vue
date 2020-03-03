@@ -16,7 +16,7 @@
             {{ sourceName }}
             <br />
             <span
-              class="has-text-link is-size-6 has-text-weight-semibold -article-title"
+              class="has-text-link is-size-6 has-text-weight-semibold -article-title is-family-secondary is-capitalized"
               @click="goTo(url)"
             >
               {{ title }}
@@ -48,11 +48,11 @@
           <p class="image is-3x1" v-else-if="!urlToImage">
             <img src="@/assets/img/no-image-available.jpg" class="-image" />
           </p>
-          <p class="is-size-7 is-lowercase has-text-grey">
+          <p class="is-size-7 is-lowercase has-text-grey is-family-secondary">
             {{ sourceName }}
             <br />
             <span
-              class="has-text-link is-size-6 has-text-weight-semibold -article-title"
+              class="has-text-link is-size-6 has-text-weight-semibold -article-title is-capitalized"
               @click="goTo(url)"
             >
               {{ title }}
