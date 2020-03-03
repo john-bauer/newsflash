@@ -1,7 +1,7 @@
 <template>
   <section class="hero is-medium">
     <div class="hero-body">
-      <SearchField />
+      <SearchField class="has-margin-bottom-50" />
       <NewsApiPlug />
     </div>
   </section>

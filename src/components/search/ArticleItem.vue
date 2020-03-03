@@ -12,17 +12,17 @@
       </figure>
       <div class="media-content">
         <div class="content">
-          <p class="is-size-7 is-lowercase has-text-grey">
+          <p class="is-lowercase has-text-grey">
             {{ sourceName }}
             <br />
             <span
-              class="has-text-link is-size-6 has-text-weight-semibold -article-title is-capitalized"
+              class="has-text-link has-text-weight-semibold -article-title is-capitalized"
               @click="goTo(url)"
             >
               {{ title }}
             </span>
             <br />
-            <span class="subtitle is-size-6 is-size-7-touch">
+            <span class="subtitle">
               {{ description }}
             </span>
           </p>
@@ -30,7 +30,7 @@
         <div class="level is-mobile">
           <div class="level-left">
             <div class="level-item">
-              <span class="is-size-7">
+              <span>
                 {{ publishedAt | moment("ddd, MMM do YYYY, h:mm a") }}
               </span>
             </div>
@@ -48,17 +48,17 @@
           <p class="image is-3x1" v-else-if="!urlToImage">
             <img src="@/assets/img/no-image-available.jpg" class="-image" />
           </p>
-          <p class="is-size-7 is-lowercase has-text-grey">
+          <p class="is-lowercase has-text-grey">
             {{ sourceName }}
             <br />
             <span
-              class="has-text-link is-size-6 has-text-weight-semibold -article-title is-capitalized"
+              class="has-text-link has-text-weight-semibold -article-title is-capitalized"
               @click="goTo(url)"
             >
               {{ title }}
             </span>
             <br />
-            <span class="subtitle is-size-6 is-size-7-touch">
+            <span class="subtitle">
               {{ description }}
             </span>
           </p>
@@ -66,7 +66,7 @@
         <div class="level is-mobile">
           <div class="level-left">
             <div class="level-item">
-              <span class="is-size-7">
+              <span>
                 {{ publishedAt | moment("ddd, MMM do YYYY, h:mm a") }}
               </span>
             </div>

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="articlesData">
+  <div v-if="articlesData" class="has-margin-top-50">
     <!-- TODO: Investigate selected page not reflecting current page (possibly use route watcher?) -->
     <b-pagination
       @change="onPageChange"

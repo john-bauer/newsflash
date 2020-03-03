@@ -2,7 +2,7 @@
   <div>
     <div v-if="articlesData">
       <div class="has-margin-top-5 has-margin-bottom-15">
-        <span class="is-size-7 is-italic">
+        <span class="is-italic">
           {{ articlesData.totalResults }} total results for "{{
             this.$router.currentRoute.query.keywords
           }}"</span

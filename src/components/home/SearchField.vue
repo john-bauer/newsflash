@@ -6,12 +6,15 @@
     </p>
     <form @submit.prevent="handleSubmit()">
       <b-field>
-        <b-input size="is-medium" v-model="keywords"></b-input>
+        <b-input
+          size="is-medium"
+          v-model="keywords"
+          placeholder="Search by Keyword"
+        ></b-input>
       </b-field>
     </form>
   </div>
 </template>
-
 <script>
 export default {
   name: "SearchField",
